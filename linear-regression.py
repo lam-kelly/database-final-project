@@ -3,16 +3,27 @@ import numpy as np
 from sklearn.metrics import mean_squared_error
 from sklearn.linear_model import LinearRegression
 
-def linear_regression_imputation(missing_percent):
+def linear_regression_imputation(missing_percent, length=None, time=None):
     df = pd.read_csv("airlines.csv")
 
-    # delete 10% of specified column
-    df.loc[df.sample(frac=missing_percent).index, "time"] = np.nan
+    if length:
+        # delete 10% of a specified column based on another column
+        n = int(missing_percent*df.shape[0])
+        df.loc[df[df["length"].gt(length)].sample(n).index, "time"] = np.nan
+    elif time:
+        # delete 10% of a specified column based on own column
+        n = int(missing_percent*df.shape[0])
+        df.loc[df[df["time"].gt(time)].sample(n).index, "time"] = np.nan
+    else:
+        # delete 10% of specified column
+        df.loc[df.sample(frac=missing_percent).index, "time"] = np.nan
+
+    print(df.isnull().sum())
 
     # Drop flight column since it has identifier that shouldn't affect other columns
     df = df.drop(['flight'], axis=1)
 
-    # Nne hot encode categorical values
+    # One hot encode categorical values
     cat_variables = df[['airline', 'airportfrom', 'airportto']]
     cat_dummies = pd.get_dummies(cat_variables, drop_first=True)
     # Replace categorical columns with one-hot encoded columns
@@ -47,5 +58,10 @@ def linear_regression_imputation(missing_percent):
     rms = np.sqrt(mean_squared_error(original, y_pred))
     print(rms)
 
-# eventually, put this in for-loop for various missing percentages
-linear_regression_imputation(.01)
+for p in [0.3, 0.5]:
+    # eventually, put this in for-loop for various missing percentages
+    print(p)
+    linear_regression_imputation(p)
+    # if the airline = ..., then delete time
+    linear_regression_imputation(p, length=0)
+    linear_regression_imputation(p, time=0)
