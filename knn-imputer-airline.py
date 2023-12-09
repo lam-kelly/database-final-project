@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.impute import KNNImputer
+from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, classification_report
 
 def knn_imputation(nrows):
     df = pd.read_csv("airlines.csv", nrows=nrows)
@@ -35,20 +36,23 @@ def knn_imputation(nrows):
     imputed = imputed['airport_from'].str.slice(start=12)
 
     # compare with original
-    original = pd.read_csv("airlines.csv", nrows=5000)
+    original = pd.read_csv("airlines.csv", nrows=nrows)
     original = original.loc[nanInd]['airportfrom']
 
-    # Accuracy
-    accuracy = 1-original.compare(imputed).shape[0]/original.shape[0]
-    print("Accuracy: ", accuracy)
+    # Accuracy = (true positive + true negative) / (true positive + false positive + true negative + false negative)
+    print("Accuracy: ", accuracy_score(original, imputed))
 
     # Precision = true positives / (true positives + false positive)
+    labels = original.unique()
+    print("Precision: ", precision_score(original, imputed, labels=labels, average='micro'))
 
     # Recall = true positive / (true positive + false negatives)
-
-    # Accuracy = (true positive + true negative) / (true positive + false positive + true negative + false negative)
+    print("Recall: ", recall_score(original, imputed, labels=labels, average='micro'))
 
     # F1 score = harmonic means of precision and recall = 2 * (precision * recall) / (precision + recall)
+    print("F1 score: ", f1_score(original, imputed, labels=labels, average='micro'))
+
+    # print(classification_report(original, imputed))
 
 # up to 5000 runs in reasonable time
 knn_imputation(1000)
