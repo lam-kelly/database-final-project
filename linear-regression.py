@@ -1,6 +1,6 @@
 import pandas as pd
 import numpy as np
-from sklearn.metrics import mean_squared_error
+from sklearn.metrics import mean_squared_error, mean_absolute_error
 from sklearn.linear_model import LinearRegression
 
 def linear_regression_imputation(missing_percent, length=None, time=None):
@@ -55,8 +55,11 @@ def linear_regression_imputation(missing_percent, length=None, time=None):
     original = original.loc[y_test.index, "time"]
 
     # root mean squared error
-    rms = np.sqrt(mean_squared_error(original, y_pred))
-    print(rms)
+    mse = np.sqrt(mean_squared_error(original, y_pred))
+    print(mse)
+
+    mae = np.sqrt(mean_absolute_error(original, y_pred))
+    print("MAE", mae)
 
 for p in [0.3, 0.5]:
     # eventually, put this in for-loop for various missing percentages
