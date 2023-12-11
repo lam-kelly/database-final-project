@@ -4,7 +4,8 @@ from sklearn.metrics import mean_squared_error, mean_absolute_error, accuracy_sc
 from sklearn.impute import SimpleImputer
 
 def mean_imputation(actualCSV, testCSV):
-    print("Mean Imputation on ", testCSV, " with ", actualCSV)
+    print()
+    print("Mean Imputation on", testCSV, "with", actualCSV)
     df = pd.read_csv(testCSV)
     df = df.drop(['flight', 'airline', 'airportfrom', 'airportto'], axis=1)
 
@@ -16,14 +17,16 @@ def mean_imputation(actualCSV, testCSV):
     actual = actual.drop(['flight', 'airline', 'airportfrom', 'airportto'], axis=1)
 
     # root mean squared error
-    mse = np.sqrt(mean_squared_error(actual, pred))
-    print("MSE", mse)
+    mrse = np.sqrt(mean_squared_error(actual, pred))
+    print("MRSE", mrse)
 
-    mae = np.sqrt(mean_absolute_error(actual, pred))
+    mae = mean_absolute_error(actual, pred)
     print("MAE", mae)
+    return mrse, mae
 
 def mode_imputation(actualCSV, testCSV):
-    print("Mode Imputation on ", testCSV, " with ", actualCSV)
+    print()
+    print("Mode Imputation on", testCSV, "with", actualCSV)
     df = pd.read_csv(testCSV)
     df = df.drop(['flight'], axis=1)
     nanInd = df.loc[pd.isna(df['airportfrom']), :].index
