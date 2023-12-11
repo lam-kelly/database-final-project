@@ -4,7 +4,7 @@ from sklearn.metrics import mean_squared_error, mean_absolute_error
 from sklearn.linear_model import LinearRegression
 from math import sqrt
 
-def evaluate(actualCSV, testCSV):
+def evaluate():
     actual = pd.read_csv("time_MCAR/actual/time_MCAR_1_actual.csv")
     pred = pd.read_csv("time_MCAR_30.0_1_imputed.csv")
     df_test = pd.read_csv("time_MCAR/test/time_MCAR_30.0_1.csv")
@@ -25,4 +25,4 @@ def evaluate(actualCSV, testCSV):
     print("MAE", mae)
     return mrse, mae
 
-evaluate("","")
+evaluate()

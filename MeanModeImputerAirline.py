@@ -34,21 +34,27 @@ def mode_imputation(actualCSV, testCSV):
     imp_mean = SimpleImputer(missing_values=np.nan, strategy='most_frequent')
     imp_mean.fit(df)
     pred = imp_mean.transform(df)
+    pred = pd.DataFrame(pred, columns=['time','length','airline','airportfrom','airportto','dayofweek','delay'])
     imputed = pred.loc[nanInd]['airportfrom']
 
     actual = pd.read_csv(actualCSV)
     actual = actual.loc[nanInd]['airportfrom']
 
     # Accuracy = (true positive + true negative) / (true positive + false positive + true negative + false negative)
-    print("Accuracy: ", accuracy_score(actual, imputed))
+    accuracy = accuracy_score(actual, imputed)
+    print("Accuracy: ", accuracy)
 
     # Precision = true positives / (true positives + false positive)
     labels = actual.unique()
-    print("Precision: ", precision_score(actual, imputed, labels=labels, average='micro'))
+    precision = precision_score(actual, imputed, labels=labels, average='micro')
+    print("Precision: ", precision)
 
     # Recall = true positive / (true positive + false negatives)
-    print("Recall: ", recall_score(actual, imputed, labels=labels, average='micro'))
+    recall = recall_score(actual, imputed, labels=labels, average='micro')
+    print("Recall: ", recall)
 
     # F1 score = harmonic means of precision and recall = 2 * (precision * recall) / (precision + recall)
-    print("F1 score: ", f1_score(actual, imputed, labels=labels, average='micro'))
+    f1score = f1_score(actual, imputed, labels=labels, average='micro')
+    print("F1 score: ", f1score)
+    return accuracy, precision, recall, f1score
 
