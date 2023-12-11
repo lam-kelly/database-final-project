@@ -3,22 +3,9 @@ import numpy as np
 from sklearn.metrics import mean_squared_error, mean_absolute_error
 from sklearn.linear_model import LinearRegression
 
-def linear_regression_imputation(missing_percent, length=None, time=None):
-    df = pd.read_csv("airlines.csv")
-
-    if length:
-        # delete 10% of a specified column based on another column
-        n = int(missing_percent*df.shape[0])
-        df.loc[df[df["length"].gt(length)].sample(n).index, "time"] = np.nan
-    elif time:
-        # delete 10% of a specified column based on own column
-        n = int(missing_percent*df.shape[0])
-        df.loc[df[df["time"].gt(time)].sample(n).index, "time"] = np.nan
-    else:
-        # delete 10% of specified column
-        df.loc[df.sample(frac=missing_percent).index, "time"] = np.nan
-
-    print(df.isnull().sum())
+def linear_regression_imputation(actualCSV, testCSV):
+    print("Linear Regression on ", testCSV, " with ", actualCSV)
+    df = pd.read_csv(testCSV)
 
     # Drop flight column since it has identifier that shouldn't affect other columns
     df = df.drop(['flight'], axis=1)
@@ -51,7 +38,7 @@ def linear_regression_imputation(missing_percent, length=None, time=None):
     y_pred = lr.predict(x_test)
 
     # Get the correct answers from original dataset
-    original = pd.read_csv("airlines.csv")
+    original = pd.read_csv(actualCSV)
     original = original.loc[y_test.index, "time"]
 
     # root mean squared error
@@ -60,11 +47,3 @@ def linear_regression_imputation(missing_percent, length=None, time=None):
 
     mae = np.sqrt(mean_absolute_error(original, y_pred))
     print("MAE", mae)
-
-for p in [0.3, 0.5]:
-    # eventually, put this in for-loop for various missing percentages
-    print(p)
-    linear_regression_imputation(p)
-    # if the airline = ..., then delete time
-    linear_regression_imputation(p, length=0)
-    linear_regression_imputation(p, time=0)
