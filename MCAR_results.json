@@ -1,1 +1,211 @@
-{"experiments": [{"testfile": "time_MCAR_1.0_3.csv", "actual_file": "time_MCAR/actual/time_MCAR_3_actual.csv", "imputations": [{"imputation": "mean", "MRSE": 13.188604397304598, "MAE": 0.5642795404040404}, {"imputation": "linear regression", "MRSE": 264.24226302104046, "MAE": 226.03702552793612}, {"imputation": "KNN", "MRSE": 860.2929233326511, "MAE": 819.0861362359551}]}, {"testfile": "time_MCAR_30.0_1.csv", "actual_file": "time_MCAR/actual/time_MCAR_1_actual.csv", "imputations": [{"imputation": "mean", "MRSE": 76.21912623364564, "MAE": 17.844856342857145}, {"imputation": "linear regression", "MRSE": 277.93852136329167, "MAE": 237.45972088395482}, {"imputation": "KNN", "MRSE": 849.7370821428246, "MAE": 802.8939392060136}]}, {"testfile": "time_MCAR_1.0_2.csv", "actual_file": "time_MCAR/actual/time_MCAR_2_actual.csv", "imputations": [{"imputation": "mean", "MRSE": 12.607881504735248, "MAE": 0.5232738787878788}, {"imputation": "linear regression", "MRSE": 252.37567167457948, "MAE": 209.49060690706597}, {"imputation": "KNN", "MRSE": 838.5025438481576, "MAE": 799.7250674157303}]}, {"testfile": "time_MCAR_30.0_3.csv", "actual_file": "time_MCAR/actual/time_MCAR_3_actual.csv", "imputations": [{"imputation": "mean", "MRSE": 75.46089042324765, "MAE": 17.735751571428573}, {"imputation": "linear regression", "MRSE": 275.63261938057303, "MAE": 236.43116490766383}, {"imputation": "KNN", "MRSE": 847.7833022017833, "MAE": 801.7651859550563}]}, {"testfile": "time_MCAR_30.0_2.csv", "actual_file": "time_MCAR/actual/time_MCAR_2_actual.csv", "imputations": [{"imputation": "mean", "MRSE": 76.62101995601469, "MAE": 17.9358629}, {"imputation": "linear regression", "MRSE": 279.7796217465778, "MAE": 239.19765268691262}, {"imputation": "KNN", "MRSE": 858.2420610804131, "MAE": 811.3925692741368}]}, {"testfile": "time_MCAR_1.0_1.csv", "actual_file": "time_MCAR/actual/time_MCAR_1_actual.csv", "imputations": [{"imputation": "mean", "MRSE": 13.777424829686405, "MAE": 0.597122505050505}, {"imputation": "linear regression", "MRSE": 274.8527018972421, "MAE": 238.57996015436458}, {"imputation": "KNN", "MRSE": 820.1632394392353, "MAE": 772.9392963483147}]}, {"testfile": "time_MCAR_10.0_3.csv", "actual_file": "time_MCAR/actual/time_MCAR_3_actual.csv", "imputations": [{"imputation": "mean", "MRSE": 43.11269033619916, "MAE": 5.83611575}, {"imputation": "linear regression", "MRSE": 272.56259383460775, "MAE": 233.2450143496275}, {"imputation": "KNN", "MRSE": 842.9996308794259, "MAE": 797.6945925561797}]}, {"testfile": "time_MCAR_10.0_2.csv", "actual_file": "time_MCAR/actual/time_MCAR_2_actual.csv", "imputations": [{"imputation": "mean", "MRSE": 44.37668594255822, "MAE": 5.982691066666666}, {"imputation": "linear regression", "MRSE": 280.8403843369491, "MAE": 239.44101600090454}, {"imputation": "KNN", "MRSE": 866.4912391806222, "MAE": 819.9168851123594}]}, {"testfile": "time_MCAR_10.0_1.csv", "actual_file": "time_MCAR/actual/time_MCAR_1_actual.csv", "imputations": [{"imputation": "mean", "MRSE": 44.68290914085746, "MAE": 6.055522222222222}, {"imputation": "linear regression", "MRSE": 282.3091457414532, "MAE": 242.12507878646693}, {"imputation": "KNN", "MRSE": 833.4131335649016, "MAE": 784.2121088483145}]}]}
+{
+    "experiments": [
+        {
+            "testfile": "time_MCAR_1.0_3.csv",
+            "actual_file": "time_MCAR/actual/time_MCAR_3_actual.csv",
+            "imputations": [
+                {
+                    "imputation": "mean",
+                    "MRSE": 13.188604397304598,
+                    "MAE": 0.5642795404040404
+                },
+                {
+                    "imputation": "linear regression",
+                    "MRSE": 264.24226302104046,
+                    "MAE": 226.03702552793612
+                },
+                {
+                    "imputation": "KNN",
+                    "MRSE": 860.2929233326511,
+                    "MAE": 819.0861362359551
+                }
+            ]
+        },
+        {
+            "testfile": "time_MCAR_30.0_1.csv",
+            "actual_file": "time_MCAR/actual/time_MCAR_1_actual.csv",
+            "imputations": [
+                {
+                    "imputation": "mean",
+                    "MRSE": 76.21912623364564,
+                    "MAE": 17.844856342857145
+                },
+                {
+                    "imputation": "linear regression",
+                    "MRSE": 277.93852136329167,
+                    "MAE": 237.45972088395482
+                },
+                {
+                    "imputation": "KNN",
+                    "MRSE": 849.7370821428246,
+                    "MAE": 802.8939392060136
+                },
+                {
+                    "imputation": "GPT-4",
+                    "MRSE": 278.31289834334325,
+                    "MAE": 237.93141790476193,
+                    "method": "Since I don't have context about how the 'time' data behaves (whether it's a time series or not, for example), I will start with a simple approach—mean imputation—and provide the resulting file."
+                }
+            ]
+        },
+        {
+            "testfile": "time_MCAR_1.0_2.csv",
+            "actual_file": "time_MCAR/actual/time_MCAR_2_actual.csv",
+            "imputations": [
+                {
+                    "imputation": "mean",
+                    "MRSE": 12.607881504735248,
+                    "MAE": 0.5232738787878788
+                },
+                {
+                    "imputation": "linear regression",
+                    "MRSE": 252.37567167457948,
+                    "MAE": 209.49060690706597
+                },
+                {
+                    "imputation": "KNN",
+                    "MRSE": 838.5025438481576,
+                    "MAE": 799.7250674157303
+                }
+            ]
+        },
+        {
+            "testfile": "time_MCAR_30.0_3.csv",
+            "actual_file": "time_MCAR/actual/time_MCAR_3_actual.csv",
+            "imputations": [
+                {
+                    "imputation": "mean",
+                    "MRSE": 75.46089042324765,
+                    "MAE": 17.735751571428573
+                },
+                {
+                    "imputation": "linear regression",
+                    "MRSE": 275.63261938057303,
+                    "MAE": 236.43116490766383
+                },
+                {
+                    "imputation": "KNN",
+                    "MRSE": 847.7833022017833,
+                    "MAE": 801.7651859550563
+                }
+            ]
+        },
+        {
+            "testfile": "time_MCAR_30.0_2.csv",
+            "actual_file": "time_MCAR/actual/time_MCAR_2_actual.csv",
+            "imputations": [
+                {
+                    "imputation": "mean",
+                    "MRSE": 76.62101995601469,
+                    "MAE": 17.9358629
+                },
+                {
+                    "imputation": "linear regression",
+                    "MRSE": 279.7796217465778,
+                    "MAE": 239.19765268691262
+                },
+                {
+                    "imputation": "KNN",
+                    "MRSE": 858.2420610804131,
+                    "MAE": 811.3925692741368
+                }
+            ]
+        },
+        {
+            "testfile": "time_MCAR_1.0_1.csv",
+            "actual_file": "time_MCAR/actual/time_MCAR_1_actual.csv",
+            "imputations": [
+                {
+                    "imputation": "mean",
+                    "MRSE": 13.777424829686405,
+                    "MAE": 0.597122505050505
+                },
+                {
+                    "imputation": "linear regression",
+                    "MRSE": 274.8527018972421,
+                    "MAE": 238.57996015436458
+                },
+                {
+                    "imputation": "KNN",
+                    "MRSE": 820.1632394392353,
+                    "MAE": 772.9392963483147
+                },
+                {
+                    "imputation": "GPT-4",
+                    "MRSE": 420.1399528728492,
+                    "MAE": 335.3,
+                    "method": "For imputing the missing values in the 'time' column of the dataset, I used the forward fill method. This method fills the missing values with the value in the previous row. It's a common technique used in time series data, where the assumption is that the missing value is likely to be similar to the one immediately preceding it."
+                }
+            ]
+        },
+        {
+            "testfile": "time_MCAR_10.0_3.csv",
+            "actual_file": "time_MCAR/actual/time_MCAR_3_actual.csv",
+            "imputations": [
+                {
+                    "imputation": "mean",
+                    "MRSE": 43.11269033619916,
+                    "MAE": 5.83611575
+                },
+                {
+                    "imputation": "linear regression",
+                    "MRSE": 272.56259383460775,
+                    "MAE": 233.2450143496275
+                },
+                {
+                    "imputation": "KNN",
+                    "MRSE": 842.9996308794259,
+                    "MAE": 797.6945925561797
+                }
+            ]
+        },
+        {
+            "testfile": "time_MCAR_10.0_2.csv",
+            "actual_file": "time_MCAR/actual/time_MCAR_2_actual.csv",
+            "imputations": [
+                {
+                    "imputation": "mean",
+                    "MRSE": 44.37668594255822,
+                    "MAE": 5.982691066666666
+                },
+                {
+                    "imputation": "linear regression",
+                    "MRSE": 280.8403843369491,
+                    "MAE": 239.44101600090454
+                },
+                {
+                    "imputation": "KNN",
+                    "MRSE": 866.4912391806222,
+                    "MAE": 819.9168851123594
+                }
+            ]
+        },
+        {
+            "testfile": "time_MCAR_10.0_1.csv",
+            "actual_file": "time_MCAR/actual/time_MCAR_1_actual.csv",
+            "imputations": [
+                {
+                    "imputation": "mean",
+                    "MRSE": 44.68290914085746,
+                    "MAE": 6.055522222222222
+                },
+                {
+                    "imputation": "linear regression",
+                    "MRSE": 282.3091457414532,
+                    "MAE": 242.12507878646693
+                },
+                {
+                    "imputation": "KNN",
+                    "MRSE": 833.4131335649016,
+                    "MAE": 784.2121088483145
+                },
+                {
+                    "imputation": "GPT-4",
+                    "MRSE": 833.4131335649016,
+                    "MAE": 784.2121088483145,
+                    "method": "To impute these missing values, I will use the median strategy. This approach is often effective for time-related data because it is less sensitive to outliers than the mean. Additionally, using the median time of flights, possibly considering the day of the week or airline, might provide a reasonable estimate for the missing values. Let's proceed with this method. "
+                }
+            ]
+        }
+    ]
+}
