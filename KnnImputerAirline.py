@@ -11,7 +11,7 @@ def knn_imputation_time(actualCSV, testCSV):
     df = df.drop(['flight'], axis=1)
     nanInd = df.loc[pd.isna(df['time']), :].index
 
-    # one-hot encode categorical columns
+    # # one-hot encode categorical columns
     cat_variables = df[['airline', 'airportfrom', 'airportto']]
     cat_dummies = pd.get_dummies(cat_variables, drop_first=True)
 
@@ -24,7 +24,9 @@ def knn_imputation_time(actualCSV, testCSV):
 
     # impute
     imputer = KNNImputer(n_neighbors=5)
-    df = pd.DataFrame(imputer.fit_transform(df), columns=df.columns)
+    imputed = imputer.fit_transform(df)
+    imputed = scaler.inverse_transform(imputed)
+    df = pd.DataFrame(imputed, columns=df.columns)
     imputed = df.loc[nanInd]['time']
 
     # compare with original

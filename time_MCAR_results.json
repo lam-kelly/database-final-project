@@ -6,8 +6,8 @@
             "imputations": [
                 {
                     "imputation": "mean",
-                    "MRSE": 13.188604397304598,
-                    "MAE": 0.5642795404040404
+                    "MRSE": 264.4663872782324,
+                    "MAE": 226.17
                 },
                 {
                     "imputation": "linear regression",
@@ -16,8 +16,8 @@
                 },
                 {
                     "imputation": "KNN",
-                    "MRSE": 860.2929233326511,
-                    "MAE": 819.0861362359551
+                    "MRSE": 288.32104675170694,
+                    "MAE": 240.95399999999998
                 }
             ]
         },
@@ -27,8 +27,8 @@
             "imputations": [
                 {
                     "imputation": "mean",
-                    "MRSE": 76.21912623364564,
-                    "MAE": 17.844856342857145
+                    "MRSE": 278.5295938794775,
+                    "MAE": 237.83066666666667
                 },
                 {
                     "imputation": "linear regression",
@@ -37,14 +37,8 @@
                 },
                 {
                     "imputation": "KNN",
-                    "MRSE": 849.7370821428246,
-                    "MAE": 802.8939392060136
-                },
-                {
-                    "imputation": "GPT-4",
-                    "MRSE": 278.31289834334325,
-                    "MAE": 237.93141790476193,
-                    "method": "Since I don't have context about how the 'time' data behaves (whether it's a time series or not, for example), I will start with a simple approach—mean imputation—and provide the resulting file."
+                    "MRSE": 287.86738937689114,
+                    "MAE": 240.5298666666667
                 }
             ]
         },
@@ -54,8 +48,8 @@
             "imputations": [
                 {
                     "imputation": "mean",
-                    "MRSE": 12.607881504735248,
-                    "MAE": 0.5232738787878788
+                    "MRSE": 252.105573123642,
+                    "MAE": 209.04
                 },
                 {
                     "imputation": "linear regression",
@@ -64,8 +58,8 @@
                 },
                 {
                     "imputation": "KNN",
-                    "MRSE": 838.5025438481576,
-                    "MAE": 799.7250674157303
+                    "MRSE": 263.1365987467346,
+                    "MAE": 213.628
                 }
             ]
         },
@@ -75,8 +69,8 @@
             "imputations": [
                 {
                     "imputation": "mean",
-                    "MRSE": 75.46089042324765,
-                    "MAE": 17.735751571428573
+                    "MRSE": 275.8084123686827,
+                    "MAE": 236.54433333333333
                 },
                 {
                     "imputation": "linear regression",
@@ -85,8 +79,8 @@
                 },
                 {
                     "imputation": "KNN",
-                    "MRSE": 847.7833022017833,
-                    "MAE": 801.7651859550563
+                    "MRSE": 286.59205653099787,
+                    "MAE": 239.92313333333334
                 }
             ]
         },
@@ -96,8 +90,8 @@
             "imputations": [
                 {
                     "imputation": "mean",
-                    "MRSE": 76.62101995601469,
-                    "MAE": 17.9358629
+                    "MRSE": 279.8924210001645,
+                    "MAE": 239.20533333333333
                 },
                 {
                     "imputation": "linear regression",
@@ -106,8 +100,8 @@
                 },
                 {
                     "imputation": "KNN",
-                    "MRSE": 858.2420610804131,
-                    "MAE": 811.3925692741368
+                    "MRSE": 289.35366196634413,
+                    "MAE": 243.2186
                 }
             ]
         },
@@ -117,8 +111,8 @@
             "imputations": [
                 {
                     "imputation": "mean",
-                    "MRSE": 13.777424829686405,
-                    "MAE": 0.597122505050505
+                    "MRSE": 274.8042212193983,
+                    "MAE": 238.18
                 },
                 {
                     "imputation": "linear regression",
@@ -127,14 +121,8 @@
                 },
                 {
                     "imputation": "KNN",
-                    "MRSE": 820.1632394392353,
-                    "MAE": 772.9392963483147
-                },
-                {
-                    "imputation": "GPT-4",
-                    "MRSE": 420.1399528728492,
-                    "MAE": 335.3,
-                    "method": "For imputing the missing values in the 'time' column of the dataset, I used the forward fill method. This method fills the missing values with the value in the previous row. It's a common technique used in time series data, where the assumption is that the missing value is likely to be similar to the one immediately preceding it."
+                    "MRSE": 277.85141424869516,
+                    "MAE": 237.53
                 }
             ]
         },
@@ -144,8 +132,8 @@
             "imputations": [
                 {
                     "imputation": "mean",
-                    "MRSE": 43.11269033619916,
-                    "MAE": 5.83611575
+                    "MRSE": 272.7166368229119,
+                    "MAE": 233.437
                 },
                 {
                     "imputation": "linear regression",
@@ -154,8 +142,8 @@
                 },
                 {
                     "imputation": "KNN",
-                    "MRSE": 842.9996308794259,
-                    "MAE": 797.6945925561797
+                    "MRSE": 284.1592984929404,
+                    "MAE": 235.74059999999997
                 }
             ]
         },
@@ -165,8 +153,8 @@
             "imputations": [
                 {
                     "imputation": "mean",
-                    "MRSE": 44.37668594255822,
-                    "MAE": 5.982691066666666
+                    "MRSE": 280.81784487457344,
+                    "MAE": 239.402
                 },
                 {
                     "imputation": "linear regression",
@@ -175,8 +163,8 @@
                 },
                 {
                     "imputation": "KNN",
-                    "MRSE": 866.4912391806222,
-                    "MAE": 819.9168851123594
+                    "MRSE": 288.28580249467717,
+                    "MAE": 239.1324
                 }
             ]
         },
@@ -186,8 +174,8 @@
             "imputations": [
                 {
                     "imputation": "mean",
-                    "MRSE": 44.68290914085746,
-                    "MAE": 6.055522222222222
+                    "MRSE": 282.1829264856398,
+                    "MAE": 241.852
                 },
                 {
                     "imputation": "linear regression",
@@ -196,14 +184,8 @@
                 },
                 {
                     "imputation": "KNN",
-                    "MRSE": 833.4131335649016,
-                    "MAE": 784.2121088483145
-                },
-                {
-                    "imputation": "GPT-4",
-                    "MRSE": 833.4131335649016,
-                    "MAE": 784.2121088483145,
-                    "method": "To impute these missing values, I will use the median strategy. This approach is often effective for time-related data because it is less sensitive to outliers than the mean. Additionally, using the median time of flights, possibly considering the day of the week or airline, might provide a reasonable estimate for the missing values. Let's proceed with this method. "
+                    "MRSE": 288.89453002782864,
+                    "MAE": 241.913
                 }
             ]
         }
