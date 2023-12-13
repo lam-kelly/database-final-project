@@ -1,0 +1,193 @@
+{
+    "experiments": [
+        {
+            "testfile": "time_MNAR_30.0_2.csv",
+            "actual_file": "time_MNAR/actual/time_MNAR_2_actual.csv",
+            "imputations": [
+                {
+                    "imputation": "mean",
+                    "MRSE": 414.58544032965426,
+                    "MAE": 386.1116666666667
+                },
+                {
+                    "imputation": "linear regression",
+                    "MRSE": 376.90587774352684,
+                    "MAE": 345.19819521540467
+                },
+                {
+                    "imputation": "KNN",
+                    "MRSE": 377.6930535059742,
+                    "MAE": 333.4416
+                }
+            ]
+        },
+        {
+            "testfile": "time_MNAR_30.0_3.csv",
+            "actual_file": "time_MNAR/actual/time_MNAR_3_actual.csv",
+            "imputations": [
+                {
+                    "imputation": "mean",
+                    "MRSE": 410.09181736126686,
+                    "MAE": 382.589
+                },
+                {
+                    "imputation": "linear regression",
+                    "MRSE": 372.95429493492935,
+                    "MAE": 342.47925660821033
+                },
+                {
+                    "imputation": "KNN",
+                    "MRSE": 375.07975233719736,
+                    "MAE": 332.36906666666664
+                }
+            ]
+        },
+        {
+            "testfile": "time_MNAR_30.0_1.csv",
+            "actual_file": "time_MNAR/actual/time_MNAR_1_actual.csv",
+            "imputations": [
+                {
+                    "imputation": "mean",
+                    "MRSE": 417.0924617715677,
+                    "MAE": 389.143
+                },
+                {
+                    "imputation": "linear regression",
+                    "MRSE": 374.5522455361992,
+                    "MAE": 343.15765872038617
+                },
+                {
+                    "imputation": "KNN",
+                    "MRSE": 377.63400097625396,
+                    "MAE": 332.96573333333333
+                }
+            ]
+        },
+        {
+            "testfile": "time_MNAR_1.0_1.csv",
+            "actual_file": "time_MNAR/actual/time_MNAR_1_actual.csv",
+            "imputations": [
+                {
+                    "imputation": "mean",
+                    "MRSE": 287.88351811105827,
+                    "MAE": 242.24
+                },
+                {
+                    "imputation": "linear regression",
+                    "MRSE": 278.15448938670227,
+                    "MAE": 230.67877261274003
+                },
+                {
+                    "imputation": "KNN",
+                    "MRSE": 271.6854136680878,
+                    "MAE": 221.5
+                }
+            ]
+        },
+        {
+            "testfile": "time_MNAR_1.0_2.csv",
+            "actual_file": "time_MNAR/actual/time_MNAR_2_actual.csv",
+            "imputations": [
+                {
+                    "imputation": "mean",
+                    "MRSE": 304.5889196934124,
+                    "MAE": 262.85
+                },
+                {
+                    "imputation": "linear regression",
+                    "MRSE": 294.64959942477964,
+                    "MAE": 251.21116818722948
+                },
+                {
+                    "imputation": "KNN",
+                    "MRSE": 296.2958136727551,
+                    "MAE": 251.922
+                }
+            ]
+        },
+        {
+            "testfile": "time_MNAR_1.0_3.csv",
+            "actual_file": "time_MNAR/actual/time_MNAR_3_actual.csv",
+            "imputations": [
+                {
+                    "imputation": "mean",
+                    "MRSE": 292.80976759664287,
+                    "MAE": 255.02
+                },
+                {
+                    "imputation": "linear regression",
+                    "MRSE": 285.089541401995,
+                    "MAE": 246.1773189558292
+                },
+                {
+                    "imputation": "KNN",
+                    "MRSE": 273.70953509149075,
+                    "MAE": 238.72
+                }
+            ]
+        },
+        {
+            "testfile": "time_MNAR_10.0_1.csv",
+            "actual_file": "time_MNAR/actual/time_MNAR_1_actual.csv",
+            "imputations": [
+                {
+                    "imputation": "mean",
+                    "MRSE": 327.1183165155996,
+                    "MAE": 289.931
+                },
+                {
+                    "imputation": "linear regression",
+                    "MRSE": 302.86720614619503,
+                    "MAE": 262.1094559834982
+                },
+                {
+                    "imputation": "KNN",
+                    "MRSE": 304.59742855119447,
+                    "MAE": 256.3242
+                }
+            ]
+        },
+        {
+            "testfile": "time_MNAR_10.0_2.csv",
+            "actual_file": "time_MNAR/actual/time_MNAR_2_actual.csv",
+            "imputations": [
+                {
+                    "imputation": "mean",
+                    "MRSE": 342.71027413837476,
+                    "MAE": 306.87
+                },
+                {
+                    "imputation": "linear regression",
+                    "MRSE": 316.1189543643219,
+                    "MAE": 276.4372098590013
+                },
+                {
+                    "imputation": "KNN",
+                    "MRSE": 318.8860770871002,
+                    "MAE": 271.51880000000006
+                }
+            ]
+        },
+        {
+            "testfile": "time_MNAR_10.0_3.csv",
+            "actual_file": "time_MNAR/actual/time_MNAR_3_actual.csv",
+            "imputations": [
+                {
+                    "imputation": "mean",
+                    "MRSE": 331.9295934381266,
+                    "MAE": 296.963
+                },
+                {
+                    "imputation": "linear regression",
+                    "MRSE": 305.7215678725003,
+                    "MAE": 267.34595053025754
+                },
+                {
+                    "imputation": "KNN",
+                    "MRSE": 307.3845485381463,
+                    "MAE": 262.86420000000004
+                }
+            ]
+        }
+    ]
+}
